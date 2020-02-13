@@ -23,6 +23,7 @@ public class BibliotecaApp {
         bookList.add(new Book("Gone with the Wind"));
         bookList.add(new Book("A Journey to the Center of the Earth"));
         bookList.add(new Book("Oliver Twist"));
+        bookList.add(new Book("Jane Eyre", "Charlotte Bronte", 1847));
         for (Book book: bookList) {
             printer.print(book.toString());
         }

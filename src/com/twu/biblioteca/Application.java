@@ -37,6 +37,7 @@ public class Application {
                     break;
                 } else {
                    bookList.remove(bookNum);
+                   printer.print(Printer.ENJOY_BOOK);
                 }
             default:
                 printer.print(Printer.INVALID_OPTION);

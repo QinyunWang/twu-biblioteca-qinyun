@@ -26,7 +26,9 @@ public class BibliotecaApp {
 
         BookList books = new BookList(bookList);
 
-        Application app = new Application(printer, books);
+        Customer customer = new Customer();
+
+        Application app = new Application(printer, books, customer);
         app.run();
 
     }

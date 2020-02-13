@@ -14,13 +14,15 @@ public class ApplicationTest {
     private BookList bookList;
     private Printer printer;
     private PrintStream printStream;
+    private Customer customer;
 
     @Before
     public void setUp() {
         bookList = mock(BookList.class);
         printStream = mock(PrintStream.class);
         printer = new Printer(printStream);
-        app = new Application(printer, bookList);
+        customer = mock(Customer.class);
+        app = new Application(printer, bookList, customer);
     }
 
     @Test

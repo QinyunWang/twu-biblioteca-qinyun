@@ -8,10 +8,12 @@ public class Application {
     private BookList bookList;
     private MainMenu menu;
     private Scanner scanner;
+    private Customer customer;
 
-    public Application(Printer printer, BookList bookList) {
+    public Application(Printer printer, BookList bookList, Customer customer) {
         this.printer = printer;
         this.bookList = bookList;
+        this.customer = customer;
         menu = new MainMenu(this.printer);
         scanner = new Scanner(System.in);
     }
@@ -37,11 +39,27 @@ public class Application {
                     break;
                 } else {
                     try {
-                        bookList.remove(bookNum);
+                        customer.checkOut(bookList.remove(bookNum));
                         printer.print(Printer.ENJOY_BOOK);
                     } catch (IndexOutOfBoundsException e) {
                         printer.print(Printer.BOOK_UNAVAILABLE);
                     }
+                    break;
+                }
+            case 2:
+                customer.outputBookList(printer);
+                printer.print("Enter the number of book to return or 0 to go back");
+                int bookNum1 = scanner.nextInt();
+                if (bookNum1 == 0) {
+                    break;
+                } else {
+                    try {
+                        bookList.addBook(customer.returnBook(bookNum1));
+                        printer.print(Printer.RETURN_SUCCESS);
+                    } catch (IndexOutOfBoundsException e) {
+                        printer.print(Printer.INVALID_RETURN);
+                    }
+                    break;
                 }
             default:
                 printer.print(Printer.INVALID_OPTION);

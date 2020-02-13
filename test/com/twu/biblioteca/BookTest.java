@@ -17,6 +17,7 @@ public class BookTest {
     private List<Book> bookList;
     private PrintStream printStream;
     private Printer printer;
+    private Book book;
 
     @Before
     public void setUp() throws Exception {
@@ -24,6 +25,7 @@ public class BookTest {
         bookList.add(new Book("Gone with the Wind"));
         bookList.add(new Book("A Journey to the Center of the Earth"));
         bookList.add(new Book("Oliver Twist"));
+        book = new Book("Jane Eyre", "Charlotte Bronte", 1847);
         printStream = mock(PrintStream.class);
         printer = new Printer(printStream);
     }
@@ -32,6 +34,16 @@ public class BookTest {
     public void testGetTitle() {
         assertThat(bookList.get(0).getTitle(), is("Gone with the Wind"));
         assertThat(bookList.get(1).getTitle(), is("A Journey to the Center of the Earth"));
+    }
+
+    @Test
+    public void testGetAuthor() {
+        assertThat(book.getAuthor(), is("Charlotte Bronte"));
+    }
+
+    @Test
+    public void testGetYear() {
+        assertThat(book.getYear(), is(1847));
     }
 
     @Test
@@ -46,7 +58,7 @@ public class BookTest {
 
     @Test
     public void shouldPrintAllInformationOfBooks() {
-        bookList.add(new Book("Jane Eyre", "Charlotte Bronte", 1847));
+        bookList.add(book);
         for (Book book: bookList) {
             printer.print(book.toString());
         }

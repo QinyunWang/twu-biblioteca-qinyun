@@ -6,6 +6,8 @@ public class Printer {
 
     public static final String WELCOME_MESSAGE = "Welcome to Biblioteca.\n" +
             "Your one-stop-shop for great book titles in Bangalore!";
+    public static final String INVALID_OPTION = "Please select a valid option!";
+
     private PrintStream printStream;
 
     public Printer(PrintStream printStream) {

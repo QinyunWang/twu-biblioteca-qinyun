@@ -1,8 +1,7 @@
 package com.twu.biblioteca;
 
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class BibliotecaApp {
 
@@ -11,21 +10,25 @@ public class BibliotecaApp {
         app.run();
     }
 
-    public static void run() {
+    private static void run() {
         PrintStream printStream = System.out;
         Printer printer = new Printer(printStream);
+        // book list (to be replaced by real data in the future)
+        List<Book> bookList = new ArrayList<>();
 
         // welcome message
         printer.print(Printer.WELCOME_MESSAGE);
 
-        // book list (to be replaced by real data in the future)
-        List<Book> bookList = new ArrayList<>();
         bookList.add(new Book("Gone with the Wind"));
         bookList.add(new Book("A Journey to the Center of the Earth"));
         bookList.add(new Book("Oliver Twist"));
         bookList.add(new Book("Jane Eyre", "Charlotte Bronte", 1847));
-        for (Book book: bookList) {
-            printer.print(book.toString());
-        }
+
+        BookList books = new BookList(bookList);
+
+        Application app = new Application(printer, books);
+        app.run();
+
     }
+
 }

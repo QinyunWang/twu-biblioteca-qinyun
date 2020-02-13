@@ -8,6 +8,7 @@ public class Printer {
             "Your one-stop-shop for great book titles in Bangalore!";
     public static final String INVALID_OPTION = "Please select a valid option!";
     public static final String ENJOY_BOOK = "Thank you! Enjoy the book";
+    public static final String BOOK_UNAVAILABLE = "Sorry, that book is not available";
 
     private PrintStream printStream;
 

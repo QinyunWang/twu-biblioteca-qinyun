@@ -18,8 +18,13 @@ public class BookList {
         books.add(newBook);
     }
 
-    public Book remove(int orderNum) {
-        return books.remove(orderNum-1);
+    public Book remove(int orderNum) throws IndexOutOfBoundsException {
+        try {
+            return books.remove(orderNum-1);
+        } catch (IndexOutOfBoundsException e) {
+            throw e;
+        }
+
     }
 
     public List<Book> getBooks() {

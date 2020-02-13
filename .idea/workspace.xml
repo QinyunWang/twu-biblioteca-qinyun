@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0ecac86-d8fa-438a-be78-9b270206e63c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Printer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,45 +28,37 @@
         <counts>
           <entry key="README" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="14" />
+          <entry key="java" value="15" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="14" />
+          <entry key="JAVA" value="15" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4649" />
+          <entry key="java" value="4837" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4649" />
+          <entry key="JAVA" value="4837" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Book.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-              <folding>
-                <element signature="e#173#174#0" expanded="true" />
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -104,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+            <state relative-caret-position="309">
+              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -128,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+            <state relative-caret-position="283">
+              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#162#163#0" expanded="true" />
@@ -138,8 +131,6 @@
                 <element signature="e#183#184#0" expanded="true" />
                 <element signature="e#327#328#0" expanded="true" />
                 <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
                 <element signature="e#389#390#0" expanded="true" />
                 <element signature="e#416#417#0" expanded="true" />
                 <element signature="e#378#379#0" expanded="true" />
@@ -206,7 +197,6 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/PrinterTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Printer.java" />
         <option value="$PROJECT_DIR$/test/MainMenuTest.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/MainMenuTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
@@ -215,6 +205,7 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Application.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Printer.java" />
       </list>
     </option>
   </component>
@@ -287,7 +278,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581598112156" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581598611749" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -466,7 +457,7 @@
     <frame x="45" y="23" width="1338" height="868" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.25385803" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.25385803" />
       <window_info id="Structure" order="1" sideWeight="0.50128865" side_tool="true" weight="0.25385803" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -475,7 +466,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32860824" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32860824" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -558,19 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
-          <folding>
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -619,16 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ApplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/PrinterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -659,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BookList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+        <state relative-caret-position="283">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#162#163#0" expanded="true" />
@@ -669,8 +637,6 @@
             <element signature="e#183#184#0" expanded="true" />
             <element signature="e#327#328#0" expanded="true" />
             <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
             <element signature="e#389#390#0" expanded="true" />
             <element signature="e#416#417#0" expanded="true" />
             <element signature="e#378#379#0" expanded="true" />
@@ -679,10 +645,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        <state relative-caret-position="309">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
         </state>
       </provider>
     </entry>

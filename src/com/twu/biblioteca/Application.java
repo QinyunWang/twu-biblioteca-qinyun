@@ -25,7 +25,7 @@ public class Application {
 
     }
 
-    public void processOption(int option) {
+    public void processOption(int option) throws IndexOutOfBoundsException {
         switch (option) {
             case 0:
                 System.exit(0);
@@ -36,8 +36,12 @@ public class Application {
                 if (bookNum == 0) {
                     break;
                 } else {
-                   bookList.remove(bookNum);
-                   printer.print(Printer.ENJOY_BOOK);
+                    try {
+                        bookList.remove(bookNum);
+                        printer.print(Printer.ENJOY_BOOK);
+                    } catch (IndexOutOfBoundsException e) {
+                        printer.print(Printer.BOOK_UNAVAILABLE);
+                    }
                 }
             default:
                 printer.print(Printer.INVALID_OPTION);

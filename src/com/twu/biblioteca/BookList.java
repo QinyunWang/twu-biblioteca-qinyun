@@ -18,13 +18,22 @@ public class BookList {
         books.add(newBook);
     }
 
+    public Book remove(int orderNum) {
+        return books.remove(orderNum-1);
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
     public int size() {
         return books.size();
     }
 
     public void outputList(Printer printer) {
-        for (Book book: books) {
-            printer.print(book.toString());
+        for (int i=0; i<books.size(); i++) {
+            int order = i+1;
+            printer.print(order + "." + books.get(i).toString());
         }
     }
 }

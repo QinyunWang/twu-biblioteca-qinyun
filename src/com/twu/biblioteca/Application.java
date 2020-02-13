@@ -17,16 +17,27 @@ public class Application {
     }
 
     public void run() {
-        menu.displayMainMenu();
-        int option = scanner.nextInt();
-        processOption(option);
+        while (true) {
+            menu.displayMainMenu();
+            int option = scanner.nextInt();
+            processOption(option);
+        }
+
     }
 
     public void processOption(int option) {
         switch (option) {
+            case 0:
+                System.exit(0);
             case 1:
                 bookList.outputList(printer);
-                break;
+                printer.print("Enter the number of book to checkout or 0 to go back");
+                int bookNum = scanner.nextInt();
+                if (bookNum == 0) {
+                    break;
+                } else {
+                   bookList.remove(bookNum);
+                }
             default:
                 printer.print(Printer.INVALID_OPTION);
         }

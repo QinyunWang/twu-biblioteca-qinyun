@@ -24,11 +24,15 @@ public class BibliotecaApp {
         bookList.add(new Book("Oliver Twist"));
         bookList.add(new Book("Jane Eyre", "Charlotte Bronte", 1847));
 
-        BookList books = new BookList(bookList);
+
+
+        PublicationList<Book> books = new PublicationList<>(bookList);
+        PublicationList<Movie> movies = new PublicationList<>();
+        movies.addPub(new Movie("Titanic", "James Cameron", 1997, 9));
 
         Customer customer = new Customer();
 
-        Application app = new Application(printer, books, customer);
+        Application app = new Application(printer, books, movies, customer);
         app.run();
 
     }

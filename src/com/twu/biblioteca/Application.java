@@ -5,15 +5,17 @@ import java.util.Scanner;
 public class Application {
 
     private Printer printer;
-    private BookList bookList;
+    private PublicationList<Book> bookList;
+    private PublicationList<Movie> movieList;
     private MainMenu menu;
     private Scanner scanner;
     private Customer customer;
 
-    public Application(Printer printer, BookList bookList, Customer customer) {
+    public Application(Printer printer, PublicationList bookList, PublicationList movieList, Customer customer) {
         this.printer = printer;
         this.bookList = bookList;
         this.customer = customer;
+        this.movieList = movieList;
         menu = new MainMenu(this.printer);
         scanner = new Scanner(System.in);
     }
@@ -32,37 +34,64 @@ public class Application {
             case 0:
                 System.exit(0);
             case 1:
-                bookList.outputList(printer);
-                printer.print("Enter the number of book to checkout or 0 to go back");
-                int bookNum = scanner.nextInt();
-                if (bookNum == 0) {
-                    break;
-                } else {
-                    try {
-                        customer.checkOut(bookList.remove(bookNum));
-                        printer.print(Printer.ENJOY_BOOK);
-                    } catch (IndexOutOfBoundsException e) {
-                        printer.print(Printer.BOOK_UNAVAILABLE);
-                    }
-                    break;
-                }
+                checkOutBook();
+                break;
             case 2:
-                customer.outputBookList(printer);
-                printer.print("Enter the number of book to return or 0 to go back");
-                int bookNum1 = scanner.nextInt();
-                if (bookNum1 == 0) {
-                    break;
-                } else {
-                    try {
-                        bookList.addBook(customer.returnBook(bookNum1));
-                        printer.print(Printer.RETURN_SUCCESS);
-                    } catch (IndexOutOfBoundsException e) {
-                        printer.print(Printer.INVALID_RETURN);
-                    }
-                    break;
-                }
+                returnBook();
+                break;
+            case 3:
+                checkOutMovie();
+                break;
             default:
                 printer.print(Printer.INVALID_OPTION);
+        }
+    }
+
+    public void checkOutBook() throws IndexOutOfBoundsException {
+        bookList.outputList(printer);
+        printer.print("Enter the number of book to checkout or 0 to go back");
+        int bookNum = scanner.nextInt();
+        if (bookNum == 0) {
+            return;
+        } else {
+            try {
+                customer.checkOutBook(bookList.remove(bookNum));
+                printer.print(Printer.ENJOY_BOOK);
+            } catch (IndexOutOfBoundsException e) {
+                printer.print(Printer.BOOK_UNAVAILABLE);
+            }
+        }
+    }
+
+    public void returnBook() {
+        customer.outputBookList(printer);
+        printer.print("Enter the number of book to return or 0 to go back");
+        int bookNum1 = scanner.nextInt();
+        if (bookNum1 == 0) {
+            return;
+        } else {
+            try {
+                bookList.addPub(customer.returnBook(bookNum1));
+                printer.print(Printer.RETURN_SUCCESS);
+            } catch (IndexOutOfBoundsException e) {
+                printer.print(Printer.INVALID_RETURN);
+            }
+        }
+    }
+
+    public void checkOutMovie() throws IndexOutOfBoundsException {
+        movieList.outputList(printer);
+        printer.print("Enter the number of movie to checkout or 0 to go back");
+        int movieNum = scanner.nextInt();
+        if (movieNum == 0) {
+            return;
+        } else {
+            try {
+                customer.checkOutMovie(movieList.remove(movieNum));
+                printer.print(Printer.ENJOY_BOOK);
+            } catch (IndexOutOfBoundsException e) {
+                printer.print(Printer.BOOK_UNAVAILABLE);
+            }
         }
     }
 

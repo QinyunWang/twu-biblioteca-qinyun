@@ -12,7 +12,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class BookTest {
+public class PublicationTest {
 
     private List<Book> bookList;
     private PrintStream printStream;

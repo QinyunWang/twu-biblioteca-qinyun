@@ -1,38 +1,18 @@
 package com.twu.biblioteca;
 
-public class Book {
-
-    private String title;
-    private String author;
-    private int year;
+public class Book extends Publication{
 
     public Book(String title) {
-        this.title = title;
-        this.author = null;
-        this.year = 0;
+        super(title);
     }
 
     public Book(String title, String author, int year) {
-        this.title = title;
-        this.author = author;
-        this.year = year;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public int getYear() {
-        return year;
+        super(title, author, year);
     }
 
     @Override
     public String toString() {
-        String info = title;
+        String info = getTitle();
         if (getAuthor() != null) {
             info += " | ";
             info += getAuthor();

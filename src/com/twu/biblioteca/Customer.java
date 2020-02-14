@@ -6,13 +6,19 @@ import java.util.List;
 public class Customer {
 
     private List<Book> loanedBooks;
+    private List<Movie> loanedMovies;
 
     public Customer() {
         loanedBooks = new ArrayList<>();
+        loanedMovies = new ArrayList<>();
     }
 
-    public void checkOut(Book book) {
+    public void checkOutBook(Book book) {
         loanedBooks.add(book);
+    }
+
+    public void checkOutMovie(Movie movie) {
+        loanedMovies.add(movie);
     }
 
     public Book returnBook(int index) throws IndexOutOfBoundsException {

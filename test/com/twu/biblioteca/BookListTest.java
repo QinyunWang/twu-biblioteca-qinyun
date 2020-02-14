@@ -16,7 +16,7 @@ import static org.mockito.Mockito.verify;
 public class BookListTest {
 
     private List<Book> books;
-    private BookList bookList;
+    private PublicationList<Book> bookList;
     private PrintStream printStream;
     private Printer printer;
 
@@ -25,7 +25,7 @@ public class BookListTest {
         books = new ArrayList<>();
         books.add(new Book("Gone with the Wind"));
         books.add(new Book("Jane Eyre", "Charlotte Bronte", 1847));
-        bookList = new BookList(books);
+        bookList = new PublicationList<>(books);
         printStream = mock(PrintStream.class);
         printer = new Printer(printStream);
     }
@@ -44,7 +44,7 @@ public class BookListTest {
 
     @Test
     public void testAddBook() {
-        bookList.addBook(new Book("War and Peace", "Makolovsiki", 1923));
+        bookList.addPub(new Book("War and Peace", "Makolovsiki", 1923));
         assertThat(3, is(bookList.size()));
         bookList.outputList(printer);
         verify(printStream, times(1)).println("War and Peace | Makolovsiki | 1923");

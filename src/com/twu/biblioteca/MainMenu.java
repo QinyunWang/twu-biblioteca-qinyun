@@ -12,6 +12,7 @@ public class MainMenu {
         String menu = "Main Menu\n" +
                 "1.List of books\n" +
                 "2.Return book\n" +
+                "3.List of movies" +
                 "0.Quit the program\nPlease enter your option: ";
         printer.print(menu);
     }

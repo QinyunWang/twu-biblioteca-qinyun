@@ -24,7 +24,7 @@ public class ApplicationTest {
         printStream = mock(PrintStream.class);
         printer = new Printer(printStream);
         customer = mock(Customer.class);
-        app = new Application(printer, bookList, movieList, customer);
+        app = new Application(printer, bookList, movieList);
     }
 
     @Test

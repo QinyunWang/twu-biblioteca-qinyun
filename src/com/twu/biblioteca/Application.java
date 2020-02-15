@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class Application {
@@ -10,17 +13,22 @@ public class Application {
     private MainMenu menu;
     private Scanner scanner;
     private Customer customer;
+    private HashMap<String, Customer> account;
+    private List<Record> records;
 
-    public Application(Printer printer, PublicationList bookList, PublicationList movieList, Customer customer) {
+    public Application(Printer printer, PublicationList bookList, PublicationList movieList) {
         this.printer = printer;
         this.bookList = bookList;
-        this.customer = customer;
         this.movieList = movieList;
         menu = new MainMenu(this.printer);
         scanner = new Scanner(System.in);
+        records = new ArrayList<>();
+        makeUserAccount();
     }
 
     public void run() {
+        logIn();
+
         while (true) {
             menu.displayMainMenu();
             int option = scanner.nextInt();
@@ -42,6 +50,7 @@ public class Application {
             case 3:
                 checkOutMovie();
                 break;
+            case 4:
             default:
                 printer.print(Printer.INVALID_OPTION);
         }
@@ -55,7 +64,9 @@ public class Application {
             return;
         } else {
             try {
-                customer.checkOutBook(bookList.remove(bookNum));
+                Book book = bookList.remove(bookNum);
+                customer.checkOutBook(book);
+                records.add(new Record(customer, book));
                 printer.print(Printer.ENJOY_BOOK);
             } catch (IndexOutOfBoundsException e) {
                 printer.print(Printer.BOOK_UNAVAILABLE);
@@ -88,11 +99,37 @@ public class Application {
         } else {
             try {
                 customer.checkOutMovie(movieList.remove(movieNum));
-                printer.print(Printer.ENJOY_BOOK);
+                printer.print(Printer.ENJOY_MOVIE);
             } catch (IndexOutOfBoundsException e) {
-                printer.print(Printer.BOOK_UNAVAILABLE);
+                printer.print(Printer.MOVIE_UNAVAILABLE);
             }
         }
     }
+
+    public void makeUserAccount() {
+        account = new HashMap<>();
+        account.put("123-1234", new Customer("John", "john.j@gmail.com", 4333222, "123-1234", "123456"));
+        account.put("222-3323", new Customer("Karen", "karen.ma@gmail.com", 221122, "222-3323", "admin"));
+    }
+
+    private void logIn() {
+        printer.print("Enter your library number to log in:");
+        String acc = scanner.next();
+        if (account.containsKey(acc)) {
+            printer.print("Enter password:");
+            String password = scanner.next();
+            if (account.get(acc).checkPassword(password)) {
+                this.customer = account.get(acc);
+                return;
+            } else {
+                printer.print("Password is not correct");
+                logIn();
+            }
+        } else {
+            printer.print("Account does not exist");
+            logIn();
+        }
+    }
+
 
 }

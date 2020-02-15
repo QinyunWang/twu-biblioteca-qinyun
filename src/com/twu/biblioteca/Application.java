@@ -51,6 +51,8 @@ public class Application {
                 checkOutMovie();
                 break;
             case 4:
+                recordsList();
+                break;
             default:
                 printer.print(Printer.INVALID_OPTION);
         }
@@ -128,6 +130,12 @@ public class Application {
         } else {
             printer.print("Account does not exist");
             logIn();
+        }
+    }
+
+    public void recordsList() {
+        for (Record record: records) {
+            printer.print(record.toString());
         }
     }
 

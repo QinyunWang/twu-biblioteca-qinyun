@@ -53,6 +53,9 @@ public class Application {
             case 4:
                 recordsList();
                 break;
+            case 5:
+                outputCustomerInfo();
+                break;
             default:
                 printer.print(Printer.INVALID_OPTION);
         }
@@ -137,6 +140,10 @@ public class Application {
         for (Record record: records) {
             printer.print(record.toString());
         }
+    }
+
+    public void outputCustomerInfo() {
+        printer.print(customer.getInfo());
     }
 
 

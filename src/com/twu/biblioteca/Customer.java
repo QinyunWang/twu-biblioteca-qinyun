@@ -35,6 +35,11 @@ public class Customer {
         return password.equals(enteredPassword);
     }
 
+    public String getInfo() {
+        String info = "Name: " + getName() + "\nEmail: " + email + "\nPhone: " + number;
+        return info;
+    }
+
     public void checkOutBook(Book book) {
         loanedBooks.add(book);
     }
